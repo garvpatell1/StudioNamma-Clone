@@ -1,0 +1,708 @@
+/* =====================================================
+   STUDIO NAMMA STYLE OVERRIDES
+===================================================== */
+
+:root {
+    --black: #111111;
+    --white: #f5f5f3;
+    --gray: #8c8c8c;
+    --border: rgba(255,255,255,.18);
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    background: var(--white);
+    color: var(--black);
+
+    font-family:
+        "Space Grotesk",
+        Arial,
+        sans-serif;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+nav {
+    height: 72px;
+
+    padding: 0 35px;
+
+    background: rgba(245,245,243,.92);
+
+    backdrop-filter: blur(10px);
+
+    mix-blend-mode: normal;
+}
+
+
+.logo,
+.menu {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   FIRST HERO
+===================================================== */
+
+.hero {
+    background: var(--white);
+
+    height: 100vh;
+
+    padding-top: 72px;
+}
+
+
+.hero h1 {
+    width: 100%;
+}
+
+
+.line {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        clamp(4rem, 13vw, 12rem);
+
+    font-weight: 900;
+
+    letter-spacing: -8px;
+
+    line-height: .78;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   MOUSE FOLLOW IMAGE
+===================================================== */
+
+.container {
+    width: 210px;
+
+    height: 280px;
+
+    border-radius: 0;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.2);
+
+    transition:
+        opacity .4s ease,
+        scale .3s ease;
+}
+
+
+/* =====================================================
+   VIDEO
+===================================================== */
+
+.video-section {
+    background: #000;
+
+    padding: 0;
+}
+
+
+.video-wrapper {
+    padding-top: 56.25%;
+}
+
+
+/* =====================================================
+   CREATIVE STUDIO
+===================================================== */
+
+.studio-section {
+
+    min-height: 100vh;
+
+    padding:
+        160px 6vw;
+
+    background: var(--white);
+
+    align-items: flex-start;
+
+    justify-content: center;
+}
+
+
+.top-text {
+
+    width: 100%;
+
+    text-align: left;
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 60px;
+}
+
+
+.hero1 {
+
+    max-width: 1200px;
+
+    text-align: left;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        clamp(3rem, 8vw, 8rem);
+
+    font-weight: 900;
+
+    line-height: .85;
+
+    letter-spacing: -6px;
+
+    text-transform: uppercase;
+}
+
+
+.hero2 {
+
+    width: 100%;
+
+    margin-top: 80px;
+
+    text-align: left;
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size:
+        clamp(1.3rem, 2.5vw, 2.5rem);
+
+    font-weight: 500;
+
+    letter-spacing: -1px;
+
+    line-height: 1.15;
+
+    text-transform: none;
+}
+
+
+.underline {
+
+    border-bottom:
+        2px solid currentColor;
+
+    padding-bottom: 2px;
+}
+
+
+/* =====================================================
+   PLAYGROUND
+===================================================== */
+
+.playground {
+
+    background: #111;
+
+    color: #f5f5f3;
+
+    padding:
+        0 5vw 100px;
+}
+
+
+/* Playground heading */
+
+.playground-hero {
+
+    min-height: 85vh;
+
+    align-items: flex-start;
+
+    justify-content: flex-end;
+
+    padding-bottom: 100px;
+
+    text-align: left;
+}
+
+
+.small-title {
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: #888;
+
+    margin-bottom: 25px;
+
+    text-transform: uppercase;
+}
+
+
+.playground-hero h2 {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        clamp(5rem, 17vw, 18rem);
+
+    font-weight: 900;
+
+    line-height: .72;
+
+    letter-spacing: -12px;
+
+    margin-left: -10px;
+}
+
+
+/* =====================================================
+   PROJECT GRID
+===================================================== */
+
+.projects {
+
+    width: 100%;
+
+    max-width: none;
+
+    margin: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 25px;
+}
+
+
+.card {
+
+    background: #191919;
+
+    border-radius: 0;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+
+.card:hover {
+
+    box-shadow:
+        0 40px 100px
+        rgba(0,0,0,.45);
+}
+
+
+/* =====================================================
+   PROJECT IMAGE
+===================================================== */
+
+.image {
+
+    height:
+        min(48vw, 700px);
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+.image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: grayscale(15%);
+
+    transition:
+        transform .8s cubic-bezier(.2,.8,.2,1),
+        filter .5s ease;
+}
+
+
+.card:hover .image img {
+
+    transform: scale(1.08);
+
+    filter: grayscale(0%);
+}
+
+
+/* =====================================================
+   PROJECT TAG
+===================================================== */
+
+.tag {
+
+    top: 20px;
+
+    left: 20px;
+
+    background: #f5f5f3;
+
+    color: #111;
+
+    padding:
+        8px 12px;
+
+    border-radius: 0;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   PROJECT CONTENT
+===================================================== */
+
+.content {
+
+    padding:
+        25px 25px 30px;
+}
+
+
+.content h2 {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        clamp(2rem, 4vw, 4rem);
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   VIEW MORE
+===================================================== */
+
+.more {
+
+    padding:
+        120px 0;
+}
+
+
+#viewBtn {
+
+    min-width: 190px;
+
+    height: 55px;
+
+    border:
+        1px solid #f5f5f3;
+
+    background: transparent;
+
+    color: #f5f5f3;
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+#viewBtn:hover {
+
+    background: #f5f5f3;
+
+    color: #111;
+
+    transform:
+        translateY(-4px);
+}
+
+
+/* =====================================================
+   CUSTOM CURSOR
+===================================================== */
+
+.cursor {
+
+    width: 12px;
+
+    height: 12px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    mix-blend-mode: difference;
+
+    transition:
+        width .2s ease,
+        height .2s ease;
+}
+
+
+/* Cursor grows over projects */
+
+.card:hover ~ .cursor {
+    width: 25px;
+    height: 25px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.playground-footer {
+
+    padding:
+        30px 0;
+
+    border-top:
+        1px solid rgba(255,255,255,.2);
+
+    text-align: left;
+
+    color: #777;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   FINAL SECTION
+===================================================== */
+
+.about-section {
+
+    min-height: 100vh;
+
+    background: #111;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.about-section h2 {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        clamp(5rem, 15vw, 16rem);
+
+    font-weight: 900;
+
+    line-height: .72;
+
+    letter-spacing: -10px;
+
+    text-align: center;
+
+    color: #f5f5f3;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    nav {
+
+        height: 65px;
+
+        padding:
+            0 18px;
+    }
+
+
+    .hero {
+
+        padding-top: 65px;
+    }
+
+
+    .line {
+
+        font-size:
+            clamp(3.2rem, 15vw, 6rem);
+
+        letter-spacing: -4px;
+
+        line-height: .85;
+    }
+
+
+    .container {
+
+        width: 130px;
+
+        height: 180px;
+    }
+
+
+    .studio-section {
+
+        padding:
+            100px 20px;
+    }
+
+
+    .hero1 {
+
+        font-size:
+            clamp(3rem, 14vw, 6rem);
+
+        letter-spacing: -4px;
+    }
+
+
+    .hero2 {
+
+        margin-top: 60px;
+
+        font-size: 1.4rem;
+    }
+
+
+    .playground {
+
+        padding:
+            0 18px 70px;
+    }
+
+
+    .playground-hero {
+
+        min-height: 70vh;
+
+        padding-bottom: 60px;
+    }
+
+
+    .playground-hero h2 {
+
+        font-size:
+            clamp(4rem, 18vw, 8rem);
+
+        letter-spacing: -6px;
+    }
+
+
+    .projects {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .image {
+
+        height: 100vw;
+
+        max-height: 500px;
+    }
+
+
+    .content h2 {
+
+        font-size: 2.5rem;
+
+        letter-spacing: -2px;
+    }
+
+
+    .about-section h2 {
+
+        font-size:
+            clamp(4rem, 18vw, 8rem);
+
+        letter-spacing: -5px;
+    }
+
+}
