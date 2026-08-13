@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Studio Namma</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            background: #f4f4f4;
+            color: #111;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            overflow-x: hidden;
+        }
+
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        nav {
+
+            width: 100%;
+            height: 80px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 50px;
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            background: white;
+
+            z-index: 1000;
+
+            transition:
+                background .3s ease,
+                box-shadow .3s ease;
+        }
+
+
+        .logo {
+
+            letter-spacing: 4px;
+
+            font-size: 14px;
+        }
+
+
+        .menu {
+
+            letter-spacing: 4px;
+
+            font-size: 14px;
+        }
+
+
+
+        /* =========================================
+           FIRST HERO
+        ========================================= */
+
+        .hero {
+
+            height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background: #f5f5f5;
+        }
+
+
+        h1 {
+
+            text-align: center;
+
+            line-height: .9;
+        }
+
+
+        .line {
+
+            display: block;
+
+            font-size: 9rem;
+
+            font-weight: 900;
+
+            opacity: 0;
+
+            transform:
+                translateY(180px)
+                scale(.5);
+
+            animation:
+                showLine .5s ease forwards;
+        }
+
+
+        .line1 {
+
+            animation-delay: .3s;
+        }
+
+
+        .line2 {
+
+            animation-delay: 1.1s;
+        }
+
+
+        .line3 {
+
+            animation-delay: 1.9s;
+        }
+
+
+
+        @keyframes showLine {
+
+            0% {
+
+                opacity: 0;
+
+                transform:
+                    translateY(180px)
+                    scale(.5);
+            }
+
+
+            100% {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+
+        }
+
+
+
+        /* =========================================
+           MOUSE FOLLOW IMAGE
+        ========================================= */
+
+        .container {
+
+            position: fixed;
+
+            height: 300px;
+
+            width: 220px;
+
+            background:
+                url('/8-bit City_1920x1080.jpg')
+                center / cover;
+
+            pointer-events: none;
+
+            z-index: 20;
+
+            transform-origin: center;
+
+            transition: opacity .3s ease;
+        }
+
+
+
+        /* =========================================
+           VIMEO VIDEO
+        ========================================= */
+
+        .video-section {
+
+            width: 100%;
+
+            background: #000;
+
+            position: relative;
+        }
+
+
+        .video-wrapper {
+
+            position: relative;
+
+            width: 100%;
+
+            padding-top: 56.25%;
+
+            overflow: hidden;
+        }
+
+
+        .video-wrapper iframe {
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            border: 0;
+        }
+
+
+
+        /* =========================================
+           CREATIVE STUDIO SECTION
+        ========================================= */
+
+        .studio-section {
+
+            min-height: 100vh;
+
+            background: #f4f4f4;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 120px 30px;
+
+            position: relative;
+        }
+
+
+        .top-text {
+
+            margin-bottom: 30px;
+
+            font-size: 14px;
+
+            letter-spacing: 8px;
+
+            color: #222;
+
+            text-align: center;
+        }
+
+
+        .hero1 {
+
+            text-align: center;
+
+            font-family: 'Anton', sans-serif;
+
+            font-size: 4rem;
+
+            max-width: 1100px;
+        }
+
+
+        .hero2 {
+
+            text-align: center;
+
+            letter-spacing: -.08rem;
+
+            text-transform: uppercase;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 2rem;
+
+            font-weight: 800;
+
+            margin-top: 40px;
+
+            line-height: 1.2;
+        }
+
+
+        .underline {
+
+            border-bottom: 3px solid black;
+
+            cursor: pointer;
+        }
+
+
+
+        /* =========================================
+           PLAYGROUND SECTION
+        ========================================= */
+
+        .playground {
+
+            min-height: 100vh;
+
+            background: #0f0f0f;
+
+            color: white;
+
+            font-family: 'Space Grotesk', sans-serif;
+
+            padding: 140px 6vw 100px;
+
+            position: relative;
+        }
+
+
+        /* Playground Hero */
+
+        .playground-hero {
+
+            min-height: 60vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+        }
+
+
+        .small-title {
+
+            font-size: 14px;
+
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 30px;
+
+            color: #aaa;
+        }
+
+
+        .playground-hero h2 {
+
+            font-size: clamp(
+                5rem,
+                15vw,
+                14rem
+            );
+
+            line-height: .8;
+
+            font-weight: 700;
+
+            letter-spacing: -8px;
+
+            margin: 0;
+        }
+
+
+        .subtitle {
+
+            min-height: 20px;
+
+            margin-top: 30px;
+
+            color: #aaa;
+        }
+
+
+
+        /* =========================================
+           PROJECTS
+        ========================================= */
+
+        .projects {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 40px;
+
+            max-width: 1400px;
+
+            margin: 100px auto 0;
+        }
+
+
+        .card {
+
+            background: #181818;
+
+            border-radius: 4px;
+
+            overflow: hidden;
+
+            cursor: pointer;
+
+            opacity: 0;
+
+            transform:
+                translateY(80px);
+
+            transition:
+                opacity .8s ease,
+                transform .5s ease,
+                box-shadow .3s ease;
+        }
+
+
+        .card.show {
+
+            opacity: 1;
+
+            transform:
+                translateY(0);
+        }
+
+
+        .card:hover {
+
+            box-shadow:
+                0 30px 70px
+                rgba(0, 0, 0, .35);
+        }
+
+
+        .image {
+
+            height: 500px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform .6s ease;
+        }
+
+
+        .card:hover .image img {
+
+            transform:
+                scale(1.05);
+        }
+
+
+        .tag {
+
+            position: absolute;
+
+            top: 20px;
+
+            left: 20px;
+
+            background: white;
+
+            color: black;
+
+            padding: 8px 14px;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            font-weight: 600;
+        }
+
+
+        .content {
+
+            padding: 25px;
+        }
+
+
+        .content h2 {
+
+            font-size: 42px;
+
+            font-weight: 500;
+
+            letter-spacing: -2px;
+        }
+
+
+
+        /* =========================================
+           VIEW MORE
+        ========================================= */
+
+        .more {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 100px 0;
+        }
+
+
+        #viewBtn {
+
+            padding: 18px 40px;
+
+            background: transparent;
+
+            border: 1px solid white;
+
+            color: white;
+
+            font-family:
+                'Space Grotesk',
+                sans-serif;
+
+            font-size: 13px;
+
+            letter-spacing: 3px;
+
+            cursor: pointer;
+
+            transition:
+                .3s ease;
+        }
+
+
+        #viewBtn:hover {
+
+            background: white;
+
+            color: black;
+        }
+
+
+
+        /* =========================================
+           PLAYGROUND FOOTER
+        ========================================= */
+
+        .playground-footer {
+
+            border-top:
+                1px solid #333;
+
+            padding-top: 40px;
+
+            text-align: center;
+
+            color: #666;
+
+            font-size: 13px;
+        }
+
+
+
+        /* =========================================
+           CUSTOM CURSOR
+        ========================================= */
+
+        .cursor {
+
+            position: fixed;
+
+            width: 18px;
+
+            height: 18px;
+
+            border-radius: 50%;
+
+            background: white;
+
+            pointer-events: none;
+
+            transform:
+                translate(-50%, -50%);
+
+            z-index: 9999;
+
+            mix-blend-mode: difference;
+
+            transition:
+                width .2s ease,
+                height .2s ease;
+        }
+
+
+
+        /* =========================================
+           FINAL SECTION
+        ========================================= */
+
+        .about-section {
+
+            min-height: 100vh;
+
+            background: #111;
+
+            color: white;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 80px 30px;
+        }
+
+
+        .about-section h2 {
+
+            font-family: 'Anton', sans-serif;
+
+            font-size: 8rem;
+
+            line-height: .9;
+
+            text-transform: uppercase;
+        }
+
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media(max-width: 768px) {
+
+            nav {
+
+                padding: 0 20px;
+            }
+
+
+            .line {
+
+                font-size: 4rem;
+            }
+
+
+            .container {
+
+                width: 150px;
+
+                height: 220px;
+            }
+
+
+            .hero1 {
+
+                font-size: 2.5rem;
+            }
+
+
+            .hero2 {
+
+                font-size: 1.4rem;
+            }
+
+
+            .playground {
+
+                padding:
+                    120px 20px 60px;
+            }
+
+
+            .playground-hero h2 {
+
+                font-size: 5rem;
+
+                letter-spacing: -4px;
+            }
+
+
+            .projects {
+
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+            }
+
+
+            .image {
+
+                height: 350px;
+            }
+
+
+            .content h2 {
+
+                font-size: 32px;
+            }
+
+
+            .about-section h2 {
+
+                font-size: 4rem;
+            }
+
+
+            .cursor {
+
+                display: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================= -->
+
+    <nav id="navbar">
+
+        <div class="logo">
+            STUDIO NAMMA
+        </div>
+
+        <div class="menu">
+            MENU
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================
+         FIRST HERO
+    ========================================= -->
+
+    <section class="hero">
+
+        <h1>
+
+            <span class="line line1">
+                WE THINK
+            </span>
+
+            <span class="line line2">
+                CRAFT AND
+            </span>
+
+            <span class="line line3">
+                DESIGN
+            </span>
+
+        </h1>
+
+    </section>
+
+
+
+    <!-- =========================================
+         MOUSE FOLLOW IMAGE
+    ========================================= -->
+
+    <div class="container"></div>
+
+
+
+    <!-- =========================================
+         VIMEO SHOWREEL
+    ========================================= -->
+
+    <section class="video-section">
+
+        <div class="video-wrapper">
+
+            <iframe
+                src="https://player.vimeo.com/video/1127104834?background=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="Showreel_Namma_EN">
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CREATIVE STUDIO
+    ========================================= -->
+
+    <section class="studio-section">
+
+        <div class="top-text">
+            STUDIO NAMMA
+        </div>
+
+
+        <div class="hero1">
+
+            Creative studio building
+            premium Brands
+
+        </div>
+
+
+        <p class="hero2">
+
+            It’s never “just a website."
+
+            <br>
+
+            Every
+
+            <span class="underline">
+                detail
+            </span>
+
+            matters.
+
+            <br>
+
+            We craft digital experiences.
+
+            <br>
+
+            Your design.
+            Our obsession.
+
+            <br>
+
+            Your brand.
+            Our
+
+            <span class="underline">
+                playground
+            </span>.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PLAYGROUND
+    ========================================= -->
+
+    <section class="playground">
+
+
+        <!-- Playground Hero -->
+
+        <div class="playground-hero">
+
+            <p class="small-title">
+                Selected Projects
+            </p>
+
+
+            <h2>
+                PLAYGROUND
+            </h2>
+
+
+            <p class="subtitle">
+            </p>
+
+        </div>
+
+
+
+        <!-- Projects -->
+
+        <section class="projects">
+
+
+            <!-- Card 1 -->
+
+            <div class="card reveal">
+
+
+                <div class="image">
+
+                    <img
+                        src="/matera.webp"
+                        alt="Matera Project"
+                    >
+
+
+                    <span class="tag">
+                        WEB DESIGN
+                    </span>
+
+                </div>
+
+
+                <div class="content">
+
+                    <h2>
+                        Matera
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Card 2 -->
+
+            <div class="card reveal">
+
+
+                <div class="image">
+
+                    <img
+                        src="/chance.webp"
+                        alt="Chance Project"
+                    >
+
+
+                    <span class="tag">
+                        BRANDING
+                    </span>
+
+                </div>
+
+
+                <div class="content">
+
+                    <h2>
+                        Chance
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- View More -->
+
+        <section class="more">
+
+            <button id="viewBtn">
+                VIEW MORE
+            </button>
+
+        </section>
+
+
+
+        <!-- Footer -->
+
+        <footer class="playground-footer">
+
+            Studio Namma
+
+        </footer>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         FINAL SECTION
+    ========================================= -->
+
+    <section class="about-section">
+
+        <h2>
+
+            WE BUILD
+
+            <br>
+
+            BRANDS
+
+        </h2>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CUSTOM CURSOR
+    ========================================= -->
+
+    <div class="cursor"></div>
+
+
+
+    <script>
+
+
+        // =========================================
+        // MOUSE FOLLOW CARD
+        // =========================================
+
+        const card =
+            document.querySelector(".container");
+
+
+        let mouseX =
+            window.innerWidth / 2;
+
+
+        let mouseY =
+            window.innerHeight / 2;
+
+
+        let x = mouseX;
+
+        let y = mouseY;
+
+
+        let rotate = 0;
+
+        let targetRotate = 0;
+
+
+        let prevX = mouseX;
+
+        let moving;
+
+
+        window.addEventListener(
+            "mousemove",
+            function (e) {
+
+
+                mouseX =
+                    e.clientX - 110;
+
+
+                mouseY =
+                    e.clientY - 150;
+
+
+                let speed =
+                    e.clientX - prevX;
+
+
+                targetRotate =
+                    Math.max(
+                        -15,
+                        Math.min(
+                            15,
+                            speed * .4
+                        )
+                    );
+
+
+                card.style.scale =
+                    "1.08";
+
+
+                prevX =
+                    e.clientX;
+
+
+                clearTimeout(moving);
+
+
+                moving =
+                    setTimeout(
+                        function () {
+
+                            targetRotate = 0;
+
+                            card.style.scale = "1";
+
+                        },
+                        120
+                    );
+
+            }
+        );
+
+
+        function animate() {
+
+
+            x +=
+                (mouseX - x) * .12;
+
+
+            y +=
+                (mouseY - y) * .12;
+
+
+            rotate +=
+                (targetRotate - rotate) * .12;
+
+
+            card.style.left =
+                x + "px";
+
+
+            card.style.top =
+                y + "px";
+
+
+            card.style.transform =
+
+                `translate(-50%, -50%)
+                 rotate(${rotate}deg)`;
+
+
+            requestAnimationFrame(
+                animate
+            );
+
+        }
+
+
+        animate();
+
+
+
+        // =========================================
+        // HIDE MOUSE IMAGE AFTER HERO
+        // =========================================
+
+        const firstHero =
+            document.querySelector(".hero");
+
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+
+                const rect =
+                    firstHero.getBoundingClientRect();
+
+
+                if (
+                    rect.bottom < 100
+                ) {
+
+                    card.style.opacity = "0";
+
+                }
+
+                else {
+
+                    card.style.opacity = "1";
+
+                }
+
+            }
+        );
+
+
+
+        // =========================================
+        // CUSTOM CURSOR
+        // =========================================
+
+        const cursor =
+            document.querySelector(".cursor");
+
+
+        document.addEventListener(
+            "mousemove",
+            (e) => {
+
+                cursor.style.left =
+                    e.clientX + "px";
+
+                cursor.style.top =
+                    e.clientY + "px";
+
+            }
+        );
+
+
+
+        // =========================================
+        // SCROLL REVEAL
+        // =========================================
+
+        const projectCards =
+            document.querySelectorAll(".card");
+
+
+        const observer =
+            new IntersectionObserver(
+                (entries) => {
+
+
+                    entries.forEach(
+                        (entry) => {
+
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target.classList.add(
+                                    "show"
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    threshold: 0.2
+                }
+            );
+
+
+        projectCards.forEach(
+            (projectCard) => {
+
+                observer.observe(
+                    projectCard
+                );
+
+            }
+        );
+
+
+
+        // =========================================
+        // CARD TILT EFFECT
+        // =========================================
+
+        projectCards.forEach(
+            (projectCard) => {
+
+
+                projectCard.addEventListener(
+                    "mousemove",
+                    (e) => {
+
+
+                        const rect =
+                            projectCard.getBoundingClientRect();
+
+
+                        const mouseX =
+                            e.clientX -
+                            rect.left;
+
+
+                        const mouseY =
+                            e.clientY -
+                            rect.top;
+
+
+                        const centerX =
+                            rect.width / 2;
+
+
+                        const centerY =
+                            rect.height / 2;
+
+
+                        const rotateX =
+                            -(mouseY - centerY) / 25;
+
+
+                        const rotateY =
+                            (mouseX - centerX) / 25;
+
+
+                        projectCard.style.transform =
+
+                            `perspective(1000px)
+                             rotateX(${rotateX}deg)
+                             rotateY(${rotateY}deg)
+                             translateY(-12px)`;
+
+                    }
+                );
+
+
+                projectCard.addEventListener(
+                    "mouseleave",
+                    () => {
+
+                        projectCard.style.transform =
+                            "";
+
+                    }
+                );
+
+            }
+        );
+
+
+
+        // =========================================
+        // VIEW MORE BUTTON
+        // =========================================
+
+        const button =
+            document.getElementById(
+                "viewBtn"
+            );
+
+
+        button.addEventListener(
+            "click",
+            () => {
+
+
+                button.innerText =
+                    "COMING SOON";
+
+
+                button.style.background =
+                    "#4a7dff";
+
+
+                button.style.borderColor =
+                    "#4a7dff";
+
+            }
+        );
+
+
+
+        // =========================================
+        // PLAYGROUND HERO ANIMATION
+        // =========================================
+
+        const playgroundHeading =
+            document.querySelector(
+                ".playground-hero h2"
+            );
+
+
+        const subtitle =
+            document.querySelector(
+                ".playground-hero .subtitle"
+            );
+
+
+        const smallTitle =
+            document.querySelector(
+                ".playground-hero .small-title"
+            );
+
+
+        playgroundHeading.style.opacity =
+            "0";
+
+
+        playgroundHeading.style.transform =
+            "translateY(80px)";
+
+
+        subtitle.style.opacity =
+            "0";
+
+
+        subtitle.style.transform =
+            "translateY(40px)";
+
+
+        smallTitle.style.opacity =
+            "0";
+
+
+        smallTitle.style.transform =
+            "translateY(40px)";
+
+
+        setTimeout(
+            () => {
+
+
+                playgroundHeading.style.transition =
+                    "1s";
+
+
+                playgroundHeading.style.opacity =
+                    "1";
+
+
+                playgroundHeading.style.transform =
+                    "translateY(0)";
+
+            },
+            200
+        );
+
+
+        setTimeout(
+            () => {
+
+
+                subtitle.style.transition =
+                    "1s";
+
+
+                subtitle.style.opacity =
+                    "1";
+
+
+                subtitle.style.transform =
+                    "translateY(0)";
+
+            },
+            500
+        );
+
+
+        setTimeout(
+            () => {
+
+
+                smallTitle.style.transition =
+                    "1s";
+
+
+                smallTitle.style.opacity =
+                    "1";
+
+
+                smallTitle.style.transform =
+                    "translateY(0)";
+
+            },
+            700
+        );
+
+
+
+        // =========================================
+        // NAVBAR SHADOW ON SCROLL
+        // =========================================
+
+        const header =
+            document.querySelector("nav");
+
+
+        window.addEventListener(
+            "scroll",
+            () => {
+
+
+                if (
+                    window.scrollY > 50
+                ) {
+
+
+                    header.style.background =
+                        "rgba(255,255,255,0.95)";
+
+
+                    header.style.boxShadow =
+                        "0 5px 20px rgba(0,0,0,0.15)";
+
+                }
+
+                else {
+
+
+                    header.style.background =
+                        "white";
+
+
+                    header.style.boxShadow =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
